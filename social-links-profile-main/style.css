@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 20%);
+    --dark-grey: hsl(0, 0%, 12%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: "Inter", sans-serif;
+    color: white;
+}
+
+p {
+    font-size: 14px;
+}
+
+.mtb-2 {
+    margin: 2rem 0;
+}
+
+.mtb-1 {
+    margin: 1.2rem 0;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--off-black);
+    height: 100vh;
+}
+
+.link-container {
+    background-color: var(--dark-grey);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px;
+    width: 300px;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 5.1rem;
+}
+
+.address {
+    color: var(--green);
+    margin: 0.5rem 0;
+    font-size: 14px;
+}
+
+.caption {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--white);
+}
+
+ul.link {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+ul.link li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    background-color: var(--grey);
+    border-radius: 5px;
+}
+
+ul.link li a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all 0.1s ease;
+}
+
+ul.link li a:hover {
+    background-color: var(--green);
+    color: var(--off-black);
+    font-weight: 600;
+}
