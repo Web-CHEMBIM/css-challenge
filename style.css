@@ -1,97 +1,160 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap');
-
-:root{
-    --yellow: hsl(47, 88%, 63%);
-    --white: hsl(0, 0%, 100%);
-    --grey: hsl(0, 0%, 50%);
-    --black: hsl(0, 0%, 7%);
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Figtree", sans-serif;
-    background-color: var(--yellow);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+:root {
+    --primary-color: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Figtree";
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
 }
 
 p {
-    font-family: "Figtree", sans-serif;
-    font-size: 0.88rem;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    line-height: 1.5rem;
 }
 
-.card-container {
-    background-color: var(--white);
-    
-    max-width: 330px;
-    min-height: 400px;
-    height: fit-content;
-    
-    border-radius: 1rem;
-    border: 1px solid var(--black);
-
-    box-shadow: 8px 8px;
-
-    padding: 1rem;
-
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Young Serif", serif;
+    color: var(--dark-charcoal);
 }
 
-.card-cover {
-    width: 100%;
-    border-radius: 0.5rem;
-}
-    
-.tag {
-    background-color: var(--yellow);
-    width: fit-content;
-    padding: 4px 8px;
-
-    font-family: "Figtree";
-    font-size: 0.77rem;
-    font-weight: bold;
-
-    border-radius: 4px;
-    
+hr {
+    background-color: var(--light-grey);
+    height: 1px;
+    margin: 2rem 0;
+    border: none;
 }
 
-.published-date {
+strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+li::marker {
+    color:var(--primary-color);
+    font-family: "Outfit", sans-serif;
     font-weight: 600;
+    font-size: 1 rem;
 }
 
-.card-container h2 {
-    font-size: 1.2rem;
+.container {
+
 }
 
-.card-container p {
-    color: var(--grey);
+.block {
+    margin: 2rem 0
+}
+.recipe-img {
+    width:100%;
+    object-fit: contain;
 }
 
-.author {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+.content-container {
+    padding: 1.5rem
+}
+
+.recipe-title p {
+    color: var(--wenge-brown);
+    margin: 1rem 0;
+}
+
+.callout {
+    background-color: var(--rose-white);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.callout .callout-title {
+    font-family: "Outfit", sans-serif;
+    color: var(--dark-raspberry);
+}
+
+.callout-list {
+    text-decoration: none;
+    list-style-position: inside;
+
+}
+
+.callout-list li {
+    line-height: 1.5;
+    margin: 0.5rem 0 ;
+}
+
+.content {
+
+}
+
+.content h1 {
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.content .content-list {
+    list-style-position: outside;
+    padding: 0 1.2rem;
+}
+
+.content .content-list li {
+    line-height: 1.5;
     margin: 0.5rem 0;
+    padding-left: 1rem;
 }
 
-.author img {
-    width: 2rem;
+.content .content-list li:first-child{
+    margin-top: 1.3rem;
 }
 
-.author h4 {
-    font-size: 0.85rem;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+tr {
+    border-bottom: 1px solid var(--light-grey);
+}
+
+td {
+    padding: 0.67rem 2rem;
+    font-family: "Outfit", sans-serif;
+}
+
+td:nth-child(2) {
+  font-weight: bolder;  
+  color: var(--primary-color);
+}
+
+@media screen and (min-width: 376px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--eggshell);
+    }
+    .container {
+        max-width: calc(500px + 2rem);
+        background-color: white;
+        padding: 2rem;
+        margin: 2rem;
+
+        border-radius: 8px;
+    }
+    .content-container {
+        padding: 1.5rem 0;
+    }
+    .recipe-img {
+        border-radius: 8px;
+    }
 }
