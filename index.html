@@ -3,24 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" , href="style.css" />
-    <title>Blog Card</title>
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Results summary component</title>
   </head>
   <body>
-    <div class="card-container">
-      <img src="./images/illustration-article.svg" class="card-cover" />
-      <div class="tag">Learning</div>
-      <h6 class="published-date">Published 21 Dec 2023</h6>
-      <h2>HTML & CSS foundation</h2>
-      <p>
-        These language are the backbone of every website, defining structure,
-        content, and presentation
-      </p>
+    <main>
+      <section class="results-container">
+        <h2>Your Results</h2>
+        <div class="score-display">
+          <h1>76</h1>
+          <span>of 100</span>
+        </div>
+        <h1 class="review">Great</h1>
+        <p class="review-comment">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </section>
 
-      <div class="author">
-        <img src="./images/image-avatar.webp" />
-        <h4 class="name">Greg Hooper</h4>
-      </div>
-    </div>
+      <section class="summary-container">
+        <h2>Summary</h2>
+        <div class="tags-container">
+          <div class="criteria-tag reaction">
+            <div class="tag-title">
+              <img src="./assets/images/icon-reaction.svg" />
+              Reaction
+            </div>
+            <div class="tag-score"><span>80</span>/ 100</div>
+          </div>
+          <div class="criteria-tag memory">
+            <div class="tag-title">
+              <img src="./assets/images/icon-memory.svg" />Memory
+            </div>
+            <div class="tag-score"><span>92 </span>/ 100</div>
+          </div>
+          <div class="criteria-tag verbal">
+            <div class="tag-title">
+              <img src="./assets/images/icon-verbal.svg" />Verbal
+            </div>
+            <div class="tag-score"><span>61</span>/ 100</div>
+          </div>
+          <div class="criteria-tag visual">
+            <div class="tag-title">
+              <img src="./assets/images/icon-visual.svg" />Visual
+            </div>
+            <div class="tag-score"><span>72</span>/ 100</div>
+          </div>
+        </div>
+        <button class="primary-btn">Continue</button>
+      </section>
+    </main>
   </body>
 </html>
